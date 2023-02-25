@@ -1,11 +1,38 @@
 import { Component } from 'react';
+import { nanoid } from 'nanoid';
 import ContactForm from './Form';
+import ContactList from './ContactList';
 export class App extends Component {
-  state = {};
-  submitForm = data => {
-    console.log(data);
+  state = {
+    contacts: [
+      { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
+      { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
+      { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
+      { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
+    ],
+    filter: '',
   };
+  submitForm = ({ id, name, number }) => {
+    const contact = {
+      id,
+      name,
+      number,
+    };
+    this.setState(({ contacts }) => ({
+      contacts: [contact, ...contacts],
+    }));
+  };
+  handeDeleteContact = deleteId => {
+    this.setState(prevState => ({
+      ...prevState,
+      contacts: this.state.contacts.filter(({ id }) => id !== deleteId),
+    }));
+  };
+
+  // const contactList = ({contacts}) =>{}
+
   render() {
+    const { contacts } = this.state;
     return (
       <div
         style={{
@@ -17,8 +44,12 @@ export class App extends Component {
           color: '#010101',
         }}
       >
-        <ContactForm onSubmit={this.submitForm} />
-        {/* React homework template */}
+        <ContactForm onSubmit={this.submitForm} contactList={contacts} />
+        <h2 title="Filter">Filter</h2>
+        <ContactList
+          contactList={contacts}
+          onDelete={this.handeDeleteContact}
+        />
       </div>
     );
   }
