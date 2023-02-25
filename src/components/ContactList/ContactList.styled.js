@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const List = styled.ul`
+  width: 75%;
   display: flex;
   list-style: none;
   flex-direction: column;
+  outline: 1px solid tomato;
 `;
 export const Item = styled.li`
   display: flex;

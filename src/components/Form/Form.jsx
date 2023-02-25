@@ -1,12 +1,6 @@
 import { nanoid } from 'nanoid';
 import { Component } from 'react';
-import {
-  Form,
-  InputHeader,
-  InputName,
-  InputNumber,
-  InputBtn,
-} from './Form.styled';
+import { Form, InputName, InputNumber, InputBtn } from './Form.styled';
 class ContactForm extends Component {
   state = {
     id: '',
