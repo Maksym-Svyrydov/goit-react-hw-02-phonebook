@@ -3,7 +3,7 @@ import { Component } from 'react';
 import ContactForm from './Form';
 import ContactList from './ContactList';
 import Filter from './Filter';
-import { Container } from './App.styled';
+import { Container, PhoneBook, Title } from './App.styled';
 export class App extends Component {
   state = {
     contacts: [
@@ -53,14 +53,14 @@ export class App extends Component {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          fontSize: 40,
+          fontSize: 36,
           color: '#010101',
         }}
       >
         <Container>
-          <h1>Phonebook</h1>
+          <PhoneBook>Phonebook</PhoneBook>
           <ContactForm contactList={contacts} onSubmit={this.submitForm} />
-          <h2>Contacts:</h2>
+          <Title>Contacts</Title>
           <Filter handleFilterName={this.handleFilterName} />
           <ContactList
             contactList={this.filterContacts()}
