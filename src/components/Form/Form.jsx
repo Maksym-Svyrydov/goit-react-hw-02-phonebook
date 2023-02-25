@@ -2,7 +2,7 @@ import { nanoid } from 'nanoid';
 import { Component } from 'react';
 import {
   Form,
-  InpetHeader,
+  InputHeader,
   InputName,
   InputNumber,
   InputBtn,
@@ -44,7 +44,6 @@ class ContactForm extends Component {
     const { name, number } = this.state;
     return (
       <Form title="Phonebook" onSubmit={this.handleSubmit}>
-        <InpetHeader>Phonebook</InpetHeader>
         <InputName
           id="name"
           type="text"
