@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { FilterContaner, FilterInput } from './Filter.styled';
 const Filter = ({ handleFilterName }) => {
   return (
@@ -13,5 +14,8 @@ const Filter = ({ handleFilterName }) => {
       />
     </FilterContaner>
   );
+};
+Filter.propTypes = {
+  handleFilterName: PropTypes.func.isRequired,
 };
 export default Filter;
