@@ -2,7 +2,7 @@ import { FilterContaner, FilterInput } from './Filter.styled';
 const Filter = ({ handleFilterName }) => {
   return (
     <FilterContaner>
-      <label htmlFor="filter"> </label>
+      <label htmlFor="filter">Find contacts by name:</label>
       <FilterInput
         id="filter"
         type="text"
