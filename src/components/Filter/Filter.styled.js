@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
 export const FilterContaner = styled.div`
+  display: flex;
   padding: 0px;
   margin: 0px;
+  width: 78%;
 `;
 export const FilterInput = styled.input`
   padding: 5px;
-  width: 60%;
-  height: 12%;
+  width: 100%;
+  height: 15%;
   font-size: 14px;
   font-weight: 600;
   background: #ffff;

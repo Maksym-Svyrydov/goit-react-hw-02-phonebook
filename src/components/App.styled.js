@@ -3,12 +3,17 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 40%;
   letter-spacing: 2px;
+  border: 6px solid rgba(50, 57, 65, 1);
+  box-shadow: 0px 0px 6px 5px #009eff;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
 `;
 export const PhoneBook = styled.h1`
-  padding: 0;
-  margin-bottom: 15px;
+  padding: 0px;
+  margin-bottom: 0px;
   letter-spacing: 2 px;
   color: rgba(50, 57, 65, 1);
 `;
